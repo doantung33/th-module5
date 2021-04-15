@@ -1,0 +1,22 @@
+<h1>LIST BOOKS</h1>
+<a style="" [routerLink]="'/create'">Create book</a>
+<table class="table table-striped" border="1px">
+  <tr style="background: darkorchid">
+    <td>Name</td>
+    <td>Author</td>
+    <td></td>
+  </tr>
+  <tr *ngFor="let b of books ; let i = index" >
+    <td>
+      <a [routerLink]="'detail/'+b.id">
+        {{b.name}}
+      </a>
+    </td>
+    <td>
+      {{b.author}}
+    </td>
+    <td>
+      <button type="button" class="btn btn-outline-warning" [routerLink]="'edit/'+b.id">Edit</button>
+      <button type="button" class="btn btn-outline-warning" (click)="delete(b.id)" >Delete</button>
+  </tr>
+</table>

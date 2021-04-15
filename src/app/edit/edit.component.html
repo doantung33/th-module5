@@ -1,0 +1,21 @@
+<h1>Edit Book</h1>
+
+<form (ngSubmit)="edit()">
+  <div class="form-group">
+    <label style="color: darkorchid">Name</label>
+    <input type="text" class="form-control" placeholder="Enter book's name" name="name"
+           [(ngModel)]="book.name">
+  </div>
+  <div class="form-group">
+    <label style="color: darkorchid">Author</label>
+    <input type="text" class="form-control" placeholder="Enter book's author" name="author"
+           [(ngModel)]="book.author">
+  </div>
+  <div class="form-group">
+    <label style="color: darkorchid">Description</label>
+    <input type="text" class="form-control" placeholder="Enter book's description" name="description"
+           [(ngModel)]="book.description">
+  </div>
+  <input type="submit" value="Edit"/>
+</form>
+<a href="/">List book</a>

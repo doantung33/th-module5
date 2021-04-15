@@ -1,0 +1,21 @@
+<h1>Create Book</h1>
+<form>
+  <div class="form-group">
+    <label style="color: darkorchid">Name</label>
+    <input type="text" class="form-control" placeholder="Enter book name" name="name"
+           [(ngModel)]="books.name">
+  </div>
+  <div class="form-group">
+    <label style="color: darkorchid">Author</label>
+    <input type="text" class="form-control" placeholder="Enter book author" name="author"
+           [(ngModel)]="books.author">
+  </div>
+  <div class="form-group">
+    <label style="color: darkorchid">Description</label>
+    <input type="text" class="form-control" placeholder="Enter book description" name="description"
+           [(ngModel)]="books.description">
+  </div>
+  <input (click)="create()" type="submit" value="Create"/>
+</form>
+<a href="/">List book</a>
+
